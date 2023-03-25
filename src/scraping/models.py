@@ -5,7 +5,7 @@ class City(models.Model):
     name = models.CharField(max_length=50,
                             verbose_name='Название населенного пункта',
                             unique=True)
-    slug = models.CharField(max_length=50, blank=True, unique=True)
+    slug = models.CharField(max_length=50, blank=True)
 
     class Meta:
         verbose_name = 'Название населенного пункта'
@@ -18,8 +18,9 @@ class City(models.Model):
 class Language(models.Model):
     name = models.CharField(max_length=50,
                             verbose_name='Язык программирования',
-                            unique=True)
-    slug = models.CharField(max_length=50, blank=True, unique=True)
+                            unique=True
+                            )
+    slug = models.CharField(max_length=50, blank=True)
 
     class Meta:
         verbose_name = 'Язык программирования'
